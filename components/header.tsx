@@ -71,7 +71,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden text-foreground">
-            {isMobileMenuOpen ? <X size={24} /> : <Menu className="text-primary-foreground" size={24} />}
+            {isMobileMenuOpen ? <X size={24} className={`${isScrolled ? "text-primary" : "text-primary"}`}/> : <Menu className={`${isScrolled ? "text-primary" : "text-primary-foreground"}`} size={24} />}
           </button>
         </div>
 
