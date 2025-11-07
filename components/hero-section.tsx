@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
-import Fundo from "@/public/fundo3.jpg";
+import Fundo from "@/public/fundo.jpg";
 
 export function HeroSection() {
   const scrollToSection = (id: string) => {

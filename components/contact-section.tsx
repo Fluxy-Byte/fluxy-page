@@ -42,9 +42,19 @@ export function ContactSection() {
                     <Phone className="text-primary" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Telefone</h3>
-                    <a href="tel:+5534997801829" className="text-muted-foreground hover:text-primary transition-colors">
-                      +55 (34) 3499780-1829
+                    <h3 className="text-xl font-bold mb-2">Telefones</h3>
+                    <a
+                      href="https://wa.me/5534997801829?text=Olá,%20queria%20fazer%20uma%20solicitação%20de%20start%20de%20projeto."
+                      target="_blank"
+                      className="w-auto text-muted-foreground hover:text-primary transition-colors">
+                      +55 (34) 99780-1829
+                    </a>
+                    <br/>
+                    <a
+                      href="https://wa.me/553492325278?text=Olá,%20queria%20fazer%20uma%20solicitação%20de%20start%20de%20projeto."
+                      target="_blank"
+                      className="text-muted-foreground hover:text-primary transition-colors">
+                      +55 (34) 9232-5278
                     </a>
                   </div>
                 </div>
