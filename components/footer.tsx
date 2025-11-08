@@ -4,8 +4,20 @@ import Image from 'next/image'
 import Logo from "@/public/fly_footer.png"
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import { useEffect, useState } from 'react';
 
 export function Footer() {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
 
   const handleDownload = (fileName: string) => {
     const link = document.createElement("a");
@@ -21,6 +33,7 @@ export function Footer() {
       <div className="container mx-auto px-20">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
+
             <div className="flex items-center">
               <Image
                 width={180}
@@ -30,8 +43,8 @@ export function Footer() {
             </div>
 
             <div className="text-center md:text-right">
-              
-              <p className="text-primary"><b>Transformando ideias em realidade digital com a Fluxy</b></p>
+
+              <p className="text-primary mt-5"><b>Transformando ideias em realidade digital com a Fluxy</b></p>
               <p className="text-sm text-muted-foreground mt-3">
                 Abaixo esta nossos documentos oficiais disponíveis
               </p>
