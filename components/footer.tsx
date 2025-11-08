@@ -17,9 +17,9 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-secondary/50 border-t border-border">
-      <div className="container mx-auto">
-        <div className="max-w-9xl mx-auto">
+    <footer className="bg-secondary/50 border-t border-border ">
+      <div className="container mx-auto px-4">
+        <div className="max-w-8xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center">
               <Image
