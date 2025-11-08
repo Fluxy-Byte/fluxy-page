@@ -5,7 +5,7 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-primary/5 to-accent/5">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
               Entre em <span className="text-primary">Contato</span>

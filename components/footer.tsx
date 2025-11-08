@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image'
-import Logo from "@/public/fly.png"
+import Logo from "@/public/fly_footer.png"
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
@@ -17,22 +17,22 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-secondary/50 border-t border-border ">
-      <div className="container mx-auto px-4">
-        <div className="max-w-8xl mx-auto">
+    <footer className="bg-secondary/50 border-t border-border">
+      <div className="container mx-auto px-20">
+        <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center">
               <Image
-                width={200}
-                height={200}
+                width={180}
+                height={180}
                 alt='Logo Fluxy'
                 src={Logo} />
             </div>
 
             <div className="text-center md:text-right">
               
-              <p className="text-primary">Transformando ideias em realidade digital</p>
-              <p className="text-sm text-muted-foreground mt-2">
+              <p className="text-primary"><b>Transformando ideias em realidade digital com a Fluxy</b></p>
+              <p className="text-sm text-muted-foreground mt-3">
                 Abaixo esta nossos documentos oficiais disponíveis
               </p>
 
