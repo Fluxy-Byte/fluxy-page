@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Bot, Code, Layers, Brain, Zap, Server } from "lucide-react"
+import { Bot, Code, Layers, Brain, Zap, Server, AppWindow } from "lucide-react"
 
 const services = [
   {
@@ -23,6 +23,23 @@ const services = [
   },
   {
     id: 2,
+    title: "Landing Pages",
+    icon: AppWindow, // você pode trocar o ícone se quiser, algo como "Layout" ou "Monitor" ficaria mais coerente
+    description: "Páginas de alta conversão desenvolvidas para destacar sua marca e gerar resultados reais.",
+    fullDescription:
+      "Criamos landing pages modernas, otimizadas e personalizadas para cada negócio, com foco em atrair, engajar e converter visitantes em clientes. Trabalhamos com design responsivo, SEO técnico, velocidade otimizada e integrações com ferramentas de marketing e análise de dados.",
+    features: [
+      "Design estratégico voltado à conversão",
+      "Desempenho otimizado para SEO e velocidade",
+      "Responsividade total para dispositivos móveis",
+      "Integração com ferramentas de marketing (Google Ads, Meta, CRM, etc.)",
+      "Análises de tráfego e métricas de conversão em tempo real",
+      "Copywriting profissional e chamadas de ação personalizadas",
+      "Hospedagem segura e monitoramento contínuo",
+    ],
+  },
+  {
+    id: 3,
     title: "APIs",
     icon: Code,
     description: "Desenvolvimento de APIs robustas e escaláveis",
@@ -37,10 +54,10 @@ const services = [
     ],
   },
   {
-    id: 3,
-    title: "Sistemas Completos",
+    id: 4,
+    title: "Criação de Softwares",
     icon: Layers,
-    description: "Desenvolvimento de sistemas web e mobile completos",
+    description: "Desenvolvimento de softwares web e mobile completos",
     fullDescription:
       "Desenvolvemos sistemas completos do zero, desde o planejamento até a implantação. Aplicações web responsivas, aplicativos mobile nativos e híbridos, painéis administrativos e muito mais.",
     features: [
@@ -52,8 +69,8 @@ const services = [
     ],
   },
   {
-    id: 4,
-    title: "Serviços com IA",
+    id: 5,
+    title: "Soluções com IA",
     icon: Brain,
     description: "Soluções inteligentes com Inteligência Artificial",
     fullDescription:
@@ -66,7 +83,7 @@ const services = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Automatização de Serviços",
     icon: Zap,
     description: "Automatização de Processos Empresariais",
@@ -80,7 +97,7 @@ const services = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Hospedagem de Serviços",
     icon: Server,
     description: "Hospedagem segura e de alta performance",

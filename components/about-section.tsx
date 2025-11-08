@@ -1,7 +1,24 @@
-import { Sparkles, Target, Users } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+"use client"
+
+import { Sparkles, Target, Users } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from 'next/image'
+import { useState, useEffect } from "react";
+import Fly from "@/public/fly_com_telefone.png"
 
 export function AboutSection() {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  });
+
   return (
     <section id="about" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
@@ -54,9 +71,15 @@ export function AboutSection() {
           </div>
 
           <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-2 hover:border-primary trasition duration-300">
-            <CardContent className="pt-8 pb-8">
-              <p className="text-lg text-center leading-relaxed max-w-4xl mx-auto">
-                Na Fluxy Technologies, unimos experiência e inovação para criar soluções tecnológicas sob medida. Nosso time, com ampla vivência no mercado, acompanha as mais recentes tendências para garantir que cada cliente alcance resultados reais e esteja sempre à frente no mundo digital.
+            <CardContent className="pt-8 pb-8 flex justify-center items-center">
+              {!isMobile && <Image
+                src={Fly.src}
+                alt="Fly"
+                width={200}
+                height={200}
+              />}
+              <p className={`text-lg ${isMobile ? "text-center" : "text-start"} leading-relaxed max-w-4xl mx-auto`}>
+                Na <b className="text-primary">Fluxy Technologies</b>, unimos experiência e inovação para criar soluções tecnológicas sob medida. Nosso time, com ampla vivência no mercado, acompanha as mais recentes tendências para garantir que cada cliente alcance resultados reais e esteja sempre à frente no mundo digital.
               </p>
             </CardContent>
           </Card>
