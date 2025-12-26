@@ -9,7 +9,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Fluxy Technologies - Soluções em Tecnologia",
   description: "Transformando ideias em realidade digital com IA, automação e desenvolvimento de sistemas",
-  generator: "Gabriel Lopes"
+  generator: "Gabriel Lopes",
+  other: {
+    "facebook-domain-verification": "jsgd6qu6levjvruoaztv7m24dr53s8"
+  }
 }
 
 export default function RootLayout({
